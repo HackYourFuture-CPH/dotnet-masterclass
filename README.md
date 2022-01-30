@@ -10,7 +10,7 @@ After finishing this masterclass you will have basic understanding of C# and .NE
 
 ## Prerequisites
 
-Please follow [flipped classroom](FLIPPED_CLASSROOM.MD).
+Please follow [flipped classroom](FLIPPED_CLASSROOM.md).
 
 ## Planning
 | Week | Topic                                                        | Preparation                         | Lesson plan                         | Homework                      |
