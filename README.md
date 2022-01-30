@@ -12,7 +12,7 @@ After finishing this masterclass you will have basic understanding of C# and .NE
 
 Please follow [flipped classroom](FLIPPED_CLASSROOM.MD).
 
-
+## Planning
 | Week | Topic                                                        | Preparation                         | Lesson plan                         | Homework                      |
 | ---- | ------------------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----------------------------- |
 | 1.   | **Fundamentals** <br />* Intro to .NET and C#<br />* First program (console)<br />* Data types and variables<br />* Methods<br />* Controlling program flow | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
