@@ -1,34 +1,25 @@
-> Please help us improve and share your feedback! If you find better tutorials
-or links, please share them by [opening a pull request](https://github.com/HackYourFuture-CPH/masterclass/pulls).
+# HackYourFuture - .NET masterclass
 
-# HackYourFuture - MASTERCLASS
+After finishing this masterclass you will have basic understanding of C# and .NET. You will also understand how to build a basic [ASP.NET](http://ASP.NET) Core application.
 
-In this number_of_weeks week module we will build a MASTERCLASS application from scratch
+📚 The curriculum includes the following topics:
+
+- Introduction to C# and .NET
+- Connecting to database to change and retrieve data
+- Creating and running a simple web application using [ASP.NET](http://ASP.NET) Core
 
 ## Prerequisites
 
-Prerequisites MASTERCLASS Content
-
-## Preparation
-
-Preparation MASTERCLASS Content
-
-## Environment setup
-
-Environment setup MASTERCLASS Content
+Please follow [flipped classroom](FLIPPED_CLASSROOM.MD).
 
 
-
-
-## Planning
-| Week | Topic                                                                                                             | Preparation                         | Lesson plan                         | Homework                      |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------- |
-| 1.   | **MASTERCLASS Introduction** <br>  Intro to .NET and C# <br> Data types and variables <br> Methods <br> Controlling program flow <br> First program (console) | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
-| 2.   | **MASTERCLASS Topic#2** <br> SubTopic#2.1 <br> SubTopic#2.2 <br> SubTopic#2.3                                                      | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
-| 3.   | **MASTERCLASS Topic#3** <br> SubTopic#3.1 <br> SubTopic#3.2 <br> SubTopic#3.3                                   | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md) | [Homework](week3/homework.md) |
-| 4.   | **MASTERCLASS Topic#4** <br> SubTopic#4.1 <br> SubTopic#4.2 <br> SubTopic#4.3                                     | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | [Homework](week4/homework.md) |
-
-
-# External Documentation 
-
-External Documentation MASTERCLASS Content
+| Week | Topic                                                        | Preparation                         | Lesson plan                         | Homework                      |
+| ---- | ------------------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----------------------------- |
+| 1.   | **Fundamentals** <br />* Intro to .NET and C#<br />* First program (console)<br />* Data types and variables<br />* Methods<br />* Controlling program flow | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
+| 2.   | **C# Fundamentals**<br />* Intro to OOP concepts<br />* Classes<br />* Abstract classes | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
+| 3.   | **C# Fundamentals**<br />* Interfaces<br />* Async programming | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md) | [Homework](week3/homework.md) |
+| 4.   | **Working with database**<br />* [ADO.NET](http://ado.net/) introduction<br />* Connecting and querying data<br />* Reading and persisting data | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | [Homework](week4/homework.md) |
+| 5.   | **[ASP.NET](http://asp.net/)** Core<br />* Anatomy of [asp.net](http://asp.net/) core application<br />* Dependency Injection<br />* Minimal API<br />* Building first API (creating first controllers and models) | [Preparation](week5/preparation.md) | [Lesson plan](week5/lesson-plan.md) | [Homework](week5/homework.md) |
+| 6.   | **Project**<br />* Connecting frontend and backend           | [Preparation](week6/preparation.md) | [Lesson plan](week6/lesson-plan.md) | [Homework](week6/homework.md) |
+| 7.   | **Project**<br />* Connecting frontend and backend<br />     | [Preparation](week7/preparation.md) | [Lesson plan](week7/lesson-plan.md) | [Homework](week7/homework.md) |
+| 8.   | **Project**<br />* Wrapping up<br />* Final words<br />* Deployment (optional)<br /> | [Preparation](week8/preparation.md) | [Lesson plan](week8/lesson-plan.md) | [Homework](week8/homework.md) |
