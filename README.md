@@ -23,7 +23,7 @@ Environment setup MASTERCLASS Content
 ## Planning
 | Week | Topic                                                                                                             | Preparation                         | Lesson plan                         | Homework                      |
 | ---- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------- |
-| 1.   | **MASTERCLASS Topic#1** <br>  SubTopic#1.1 <br> SubTopic#1.2 <br> SubTopic#1.3 | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
+| 1.   | **MASTERCLASS Introduction** <br>  Intro to .NET and C# <br> Data types and variables <br> Methods <br> Controlling program flow <br> First program (console) | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
 | 2.   | **MASTERCLASS Topic#2** <br> SubTopic#2.1 <br> SubTopic#2.2 <br> SubTopic#2.3                                                      | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
 | 3.   | **MASTERCLASS Topic#3** <br> SubTopic#3.1 <br> SubTopic#3.2 <br> SubTopic#3.3                                   | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md) | [Homework](week3/homework.md) |
 | 4.   | **MASTERCLASS Topic#4** <br> SubTopic#4.1 <br> SubTopic#4.2 <br> SubTopic#4.3                                     | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | [Homework](week4/homework.md) |

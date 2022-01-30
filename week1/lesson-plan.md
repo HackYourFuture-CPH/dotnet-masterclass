@@ -1,12 +1,28 @@
-# Week 1 : Topic #1
+# Week 1 : Introduction
 
 ## Pre-requisites:
 
-Something about installing the software or prior knowlegde about a specific topic
+Installed .NET 6 SDK & Visual Studio 2022 (VS Code?) on the machine
 
 ## Lesson Plan:
-### 1.	Sub-topic #1.1
+### 1.	Intro to .NET and C#
+* Introduction (History of .NET and .NET Framework)
+* Current state of the .NET
+* Languages
+* Dev IDEs
+* C#
+* C# and Javascript differences
 
-### 2.	Sub-topic #1.2
+### 2. First program (console)
+* Creating hello world in IDE
+### 3.	Data types and variables
+* C# type system
+* Specifying types
+* Built in types
+* Custom types
+* Value types
+* Reference types
+### 4.	Methods
 
-### 3.	Sub-topic #1.3
+### 5.	Controlling program flow
+
