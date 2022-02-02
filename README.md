@@ -8,6 +8,10 @@ After finishing this masterclass you will have basic understanding of C# and .NE
 - Connecting to database to change and retrieve data
 - Creating and running a simple web application using [ASP.NET](http://ASP.NET) Core
 
+## Things to know
+
+Although Visual Studio is a mainstream tool that is used when working with C# we will use Visual Studio Code in this curiculum since most of the studends have used it as part of previous curriculums.
+
 ## Prerequisites
 
 Please follow [flipped classroom](FLIPPED_CLASSROOM.md).
