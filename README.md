@@ -8,6 +8,22 @@ After finishing this masterclass you will have basic understanding of C# and .NE
 - Connecting to database to change and retrieve data
 - Creating and running a simple web application using [ASP.NET](http://ASP.NET) Core
 
+📅 🏬 Agenda & Location
+
+The masterclass is planned to be 8 weeks on Tuesdays from 6PM to 9PM starting from the 22nd of February. 
+
+- 22 February, 
+- 1 March, 
+- 8 March, 
+- 15 March, 
+- 22 March, 
+- 29 March, 
+- 5 April, 
+- 12 April
+
+The location of Visma office https://goo.gl/maps/CoSc7qcE1L1ujjXk9
+Gærtorvet 1-5, 1799 København V
+
 ## Things to know
 
 Although Visual Studio is a mainstream tool that is used when working with C# we will use Visual Studio Code in this curiculum since most of the studends have used it as part of previous curriculums.
