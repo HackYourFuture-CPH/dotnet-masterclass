@@ -42,7 +42,7 @@ You are required to have a laptop or a personal computer for writing and running
 
 - Install C# extension for Visual Studio Code
 
-![image](https://user-images.githubusercontent.com/1658326/154748378-e4f8455e-5576-4893-9136-63d75ffed031.png)
+![image](https://user-images.githubusercontent.com/1658326/154748560-626f870a-3c25-4014-bfe5-d4f98f6d0af9.png)
 
 ## Learning materials
 
