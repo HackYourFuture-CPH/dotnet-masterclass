@@ -46,7 +46,7 @@ You are required to have a laptop or a personal computer for writing and running
 
 ## Learning materials
 
-Before and during the masterclass we recommend you take some time to go through the following materials (1 - 2 hrs of watching & reading).
+Before and during the masterclass we recommend you take some time to go through the following materials (1 - 2 hrs of watching & reading excluding Microsoft Learn).
 
   - [What is .NET? What is .NET? What's C#?](https://www.youtube.com/watch?v=bEfBfBQq7EE) (19 minutes)
   - [How did we get from .NET Framework to just .NET?
