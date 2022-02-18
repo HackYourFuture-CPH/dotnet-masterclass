@@ -33,12 +33,12 @@ You are required to have a laptop or a personal computer for writing and running
 - Go to [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 - Click on download .NET SDK x64 button
 
-![Untitled](Untitled.png)
+![Download dotnet](assets/dotnet-download.png)
 
 - Start installation
 - Verify that .NET has been installed by running `dotnet` command in console. You should see this result in the console
 
-![Untitled](Untitled%201.png)
+![Test dotnet installation](assets/dotnet-test.png)
 
 ## Learning materials
 
