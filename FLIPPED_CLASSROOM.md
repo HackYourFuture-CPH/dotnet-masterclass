@@ -52,4 +52,4 @@ Before and during the masterclass we recommend you take some time to go through 
   - [Decimals](https://youtu.be/kdKcpF9roeU) (5:43 min)
 - [Branches (if/else) on Microsoft Learn](https://docs.microsoft.com/en-gb/learn/modules/csharp-if-elseif-else/1-introduction)
 
-Learning new stuff can be exciting, but a bit overwhelming. Take your time when going through the materials. Experiment with the programs, change them a bit and have fun! Feel free to reach out to mentors on Slack on #dotnet channel.
+Learning new stuff can be exciting, but a bit overwhelming. Take your time when going through the materials. Experiment with the programs, change them a bit and have fun! Feel free to reach out to mentors on Slack on #dotnet-masterclass-2022 channel.
