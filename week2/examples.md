@@ -219,3 +219,47 @@ class Meal
     }
 }
 ```
+
+
+## Inheritance
+
+```csharp
+
+
+
+
+
+
+
+
+
+
+Console.WriteLine("");
+
+var dog = new Dog { Name = "Spotty" };
+var cat = new Cat { IsInsane = true, Name = "Garfield" };
+
+var animals = new List<Animal>();
+animals.Add(dog);
+animals.Add(cat);
+
+foreach (var animal in animals)
+{
+    Console.WriteLine($"I found: {animal.Name}");
+}
+
+class Animal
+{
+    public string Name { get; set; }
+}
+
+class Dog : Animal
+{
+    public bool IsOnALeash { get; set; }
+}
+
+class Cat : Animal
+{
+    public bool IsInsane { get; set; }
+}
+```
