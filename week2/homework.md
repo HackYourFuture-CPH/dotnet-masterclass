@@ -30,7 +30,7 @@ time.Minutes = 40;
 PrintTime(time);
 ```
 
-We should get `8:48` as an output. Think what happens when minutes are less than 10.
+We should get `8:40` as an output. Think what happens when minutes are less than 10.
 
 ### 2. Adding constructor
 
