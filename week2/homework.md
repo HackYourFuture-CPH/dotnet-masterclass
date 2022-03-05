@@ -54,9 +54,9 @@ We need to add method `AddHours` which accepts a number which returns a new time
 
 ```cs
 var time = new JupiterTime(2, 20);
-var timeIn2Hours = time.AddHours(1);
+var timeIn1Hour = time.AddHours(1);
 
-PrintTime(timeIn2Hours);
+PrintTime(timeIn1Hour);
 ```
 
 The code should print `3:20`.
