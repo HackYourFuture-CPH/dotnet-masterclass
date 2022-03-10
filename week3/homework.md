@@ -10,39 +10,72 @@ Create a PR to add your homework to the respective week folder like you are used
 
 ### 1. Make a new WebAPI project with a ConverterController
 Either reuse an existing WebAPI project, or create a new.
-Add a new controller called a "Converter" controller, with the route "converter".
-Look at the built-in controller to see how it's done.
+You create a new using the command ```dotnet new webapi``` in a new and empty folder in your repository.
 
-```dotnet new webapi```
+When you project is created, make a new controller, called "ConverterController" controller, with the base route "converter".
 
+Look at the included "WeatherForecast" controller to see how a basic controller is created - or check the [examples](examples.md).
 
 
 ### 2. Make a controller action to convert Gallons to Litres
-Make a controller action that takes an int Gallons and returns an int in litres. (Multiply gallons with 0.26417 to get it in litres).
+Make a controller action that takes an int Gallons and returns an int in litres. (Multiply gallons with 0.26417 to get it in liters).
+The return value should be a 'double' and input should be "int liters".
+Suggested signature: ```public double GallonsToLitres(int liters)```.
+Test it using Swagger.
 
 
 ### 3. Make an action that converts Miles to kilometres
-Input should be an int, in miles. Output should be an object with both the miles and the kilometres.
+Input should be an int, in miles. Output should be an object with both the miles and the kilometers.
 km=m*1.609.
-Create the model to output as well (Mileage).
+Create the model to output as well, call it "Distance" and make sure it can hold both Miles and Kilometers..
+Suggested signature: ```public Distance ConvertMiles(int miles)```
 
 
 ```csharp
 //To return an object, do like this:
 
-return new Mileage(){Miles=miles, Kilometers=km};
+return new Distance(){Miles=miles, Kilometers=km};
 ```
+When done, test it via Swagger.
 
 
-### Make an action that accepts HTTP Post
-Make an action that accepts an HTTP Post, with a body that is an object with number and a unit, and returns the corresponding conversion.
+### 4. (Optional) Make an action that accepts HTTP Post
+Make an action that accepts an HTTP Post, with a body that is a ConversionRequest.
+A ConversionRequest is a model you have do define as well, but it should contain: 
+```csharp
+ public double Value {get;set;}
+ public ValueType TypeToConvert {get;set;}
+````
+where ValueType is an enum like this:
 
 ```csharp
+public enum ValueType{
+    Miles,
+    Kilometeres,
+    Gallons,
+    Liters
+}
 
 ```
+The suggested signature of the action could be like this: ```public ConversionResponse ConvertValues([FromBody]ConversionRequest Request)```
+And the ConversionResponse model should contain both the a list of the converted values like:
+ ```
+ [
+     {
+         ValueType="Miles",
+         Value=1
+     }, 
+     {
+         ValueType="Kilometers",
+         Value=1.609
+     }
+ ]
+ ```
+ The method should be able to convert between kilometers and miles - and between gallons and liters - depending on the request.
 
-## Extra
 
-### Additional conversions
-Add additional conversions - pounds to kg, yards to meters, feet to cm and so on.
-Either in separate methods or in a main Conversion action method.
+### 5. (Optional) Additional conversions
+Add additional conversions - pounds to kg, yards to meters, feet to cm and so on to the Action in number 4.
+
+### 6. Codingame.com
+Try to compete in a couple of "Clash of Code" events on Codingame.com. It's fine to start of with Javascript if you are most comfortable with it, but try also to challenge yourself with c#. And it doesn't matter how well you do - it's just good exercise.
