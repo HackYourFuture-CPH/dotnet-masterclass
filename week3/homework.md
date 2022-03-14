@@ -18,7 +18,7 @@ Look at the included "WeatherForecast" controller to see how a basic controller 
 
 
 ### 2. Make a controller action to convert Gallons to Litres
-Make a controller action that takes an int Gallons and returns an int in litres. (Multiply gallons with 0.26417 to get it in liters).
+Make a controller action that takes an int Gallons and returns an int in litres. (Multiply gallons with 3.785412 to get it in liters).
 The return value should be a 'double' and input should be "int liters".
 Suggested signature: ```public double GallonsToLitres(int liters)```.
 Test it using Swagger.
