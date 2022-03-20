@@ -1,7 +1,7 @@
 # Week 5 : Working with persisted data
 
 ## Pre-requisites:
-TBD
+Having a finished week 4 homework.
 
 ## Lesson Plan:
 ### 1 Async/await
