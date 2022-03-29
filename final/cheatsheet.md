@@ -1,17 +1,6 @@
-# week 6
+# Cheatsheet
 
-- Finish Meal API
-  - Get All Meals
-
-  - Create Meal
-
-  - Get Meal by ID
-
-  - Delete Meal by ID
-
-  - Update Meal
-
-## Cheatsheet
+## How to get one functionality (vertical)
 
 - Create a database table
 - Create a C# model
