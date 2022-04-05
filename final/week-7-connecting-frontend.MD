@@ -84,6 +84,14 @@ public class MealController : ControllerBase
 10. Make search by title.
 
     - first we need to introduce a new model, call it MealSearch and add Title (string) property into it
+
+    ```csharp
+    public class MealSearch
+    {
+      public string Title { get; set; }
+    }
+    ```
+
     - add this new model as parameter to `get all meals` endpoint
 
     ```csharp
