@@ -25,19 +25,19 @@
 
 ![mysql-server-page.png](assets/mysql-server-page.png)
 
-5. Select `Single server` and click `Create`
+3. Select `Single server` and click `Create`
 
 ![mysql-single-server.png](assets/mysql-single-server.png)
 
-6. Fill in required fields. Make sure to select `Sweden Central` for Location. Remember username & password, we will need it later.
+4. Fill in required fields. Make sure to select `Sweden Central` for Location. Remember username & password, we will need it later.
 
 ![azure-mysql-create-server.png](assets/azure-mysql-create-server.png)
 
-7. Click `Review + Create` on the bottom of the page
+5. Click `Review + Create` on the bottom of the page
 
-8. Click `Create` on the bottom of the page
+6. Click `Create` on the bottom of the page
 
-9. Wait for the server to get deployed (it will take some time)
+7. Wait for the server to get deployed (it will take some time)
 
 ![azure-mysql-deployment.png](assets/azure-mysql-deployment.png)
 
@@ -99,8 +99,8 @@
 
 ![azure-app-service-deployment.png](assets/azure-app-service-deployment.png)
 
-5. Click on `Review + Create` on the bottom of the page
-6. Click `Create`
+4. Click on `Review + Create` on the bottom of the page
+5. Click `Create`
 
 ### Update meal-sharing app
 1. `App Service` creation process will create an  Github action deployment workflow inside of the `.github` folder. Github action workflow  assumes that your solution is located inside of the repository root, because of this deployment will probably fail (image).
@@ -124,7 +124,7 @@ If fix is successful  github statuscheck should be green
 
 ![github-action-deployment-success.png](assets/github-action-deployment-success.png)
 
-2. To ensure that deployment will also contain client bundles, add theese lines after checkout step in github action workflow:
+3. To ensure that deployment will also contain client bundles, add theese lines after checkout step in github action workflow:
 ```yaml
 - uses: actions/setup-node@v3
   with:
@@ -144,7 +144,7 @@ make sure to  enter correct username, password and database
 
 ![azure-app-service-connection-str.png](assets/azure-app-service-connection-str.png)
 
-5. Modify code to read connection string from environment variable
+6. Modify code to read connection string from environment variable
 ```csharp
 public class Shared
 {
@@ -153,6 +153,6 @@ public class Shared
  Environment.GetEnvironmentVariable("MYSQLCONNSTR_MealSharingDb");
 }
 ```
-6. Commit changes, wait for deployment to finish - test application!
+7. Commit changes, wait for deployment to finish - test application!
 
 ![azure-app-service-url.png](assets/azure-app-service-url.png)
