@@ -14,7 +14,7 @@
 
 ![azure-dasboard.png](assets/azure-dasboard.png)
 
-### Redeeming Azure 
+### Redeeming Azure code
 
 1. Go to https://www.microsoftazurepass.com/ and sign-in
 
