@@ -31,7 +31,7 @@
 
 6. Fill in required fields. Make sure to select `Sweden Central` for Location. Remember username & password, we will need it later.
 
-![azure-mysql-create-server.png](azure-mysql-create-server.png)
+![azure-mysql-create-server.png](assets/azure-mysql-create-server.png)
 
 7. Click `Review + Create` on the bottom of the page
 
