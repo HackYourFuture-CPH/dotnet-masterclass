@@ -1,16 +1,16 @@
 ## Preparation
 
 ### Creating new Azure account
-1. Register on azure by going to https://portal.azure.com/
-2. Register using Github account
+1. Register on Azure by going to https://portal.azure.com/
+2. Register using your GitHub account
 
 ![azure-signup.png](assets/azure-signup.png)
 
-3. Approve Azure access to github account
+3. Approve Azure access to your GitHub account
 
 ![github-approve-azure.png](assets/github-approve-azure.png)
 
-4. Once all subsequent steps are done you should be able to see Azure Dasboard
+4. Once all subsequent steps are done you should be able to see the Azure Dashboard
 
 ![azure-dasboard.png](assets/azure-dasboard.png)
 
@@ -24,7 +24,7 @@
 
 ![azure-pass-start.png](assets/azure-pass-start.png)
 
-3. Click on Confirm Microsoft Account
+3. Click on `Confirm Microsoft Account`
 
 ![azure-pass-confirm.png](assets/azure-pass-confirm.png)
 
