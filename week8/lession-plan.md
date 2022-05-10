@@ -129,7 +129,7 @@ If fix is successful, GitHub status check should be green
 ```yaml
 - uses: actions/setup-node@v3
   with:
-  node-version: 14
+    node-version: 14
 - run: npm install
   working-directory: final/MealsharingNet/ClientApp
 - run: npm run build
