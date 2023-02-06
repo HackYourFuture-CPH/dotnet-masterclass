@@ -10,16 +10,16 @@ After finishing this masterclass you will have basic understanding of C# and .NE
 
 📅 🏬 Agenda & Location
 
-The masterclass is planned to be 8 weeks on Tuesdays from 6PM to 9PM starting from the 22nd of February. 
+The masterclass is planned to be 8 weeks on Tuesdays from 6PM to 9PM starting from the 21st of February. 
 
-- 22 February, 
-- 1 March, 
-- 8 March, 
-- 15 March, 
-- 22 March, 
-- 29 March, 
-- 5 April, 
-- 12 April
+- 21 February, 
+- 28 February, 
+- 7 March, 
+- 14 March, 
+- 21 March, 
+- 28 March, 
+- 4 April, 
+- 11 April
 
 The location of Visma office https://goo.gl/maps/CoSc7qcE1L1ujjXk9
 Gærtorvet 1-5, 1799 København V
