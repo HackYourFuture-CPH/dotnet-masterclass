@@ -1,6 +1,6 @@
  # Preparation
 
-Please follow [learning materials](https://github.com/HackYourFuture-CPH/dotnet-masterclass/blob/main/FLIPPED_CLASSROOM.md#learning-materials).
+Please follow [getting started](https://github.com/HackYourFuture-CPH/dotnet-masterclass/blob/main/getting-started.md).
 
 ## Lesson Plan:
 ### 1.	Intro to .NET and C#
