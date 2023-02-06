@@ -30,7 +30,7 @@ Although Visual Studio is a mainstream tool that is used when working with C# we
 
 ## Prerequisites
 
-Please follow [flipped classroom](FLIPPED_CLASSROOM.md).
+Please read [flipped classroom](FLIPPED_CLASSROOM.md) and [getting started](getting-started.md).
 
 ## Planning
 
