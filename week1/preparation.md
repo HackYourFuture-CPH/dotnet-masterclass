@@ -1,6 +1,6 @@
  # Preparation
 
-Please follow [getting started](https://github.com/HackYourFuture-CPH/dotnet-masterclass/blob/main/getting-started.md).
+Please follow [getting started](https://github.com/HackYourFuture-CPH/dotnet-masterclass/blob/main/getting-started.md) guide first.
 
 ### 1.	Intro to .NET and C#
 * Introduction
