@@ -10,15 +10,15 @@ After finishing this masterclass you will have basic understanding of C# and .NE
 
 📅 🏬 Agenda & Location
 
-The masterclass is planned to be 8 weeks on Tuesdays from 6PM to 9PM starting from the 21st of February. 
+The masterclass is planned to be 8 weeks on Tuesdays from 6PM to 9PM starting from the 21st of February.
 
-- 21 February, 
-- 28 February, 
-- 7 March, 
-- 14 March, 
-- 21 March, 
-- 28 March, 
-- 4 April, 
+- 21 February,
+- 28 February,
+- 7 March,
+- 14 March,
+- 21 March,
+- 28 March,
+- 4 April,
 - 11 April
 
 The location of Visma office https://goo.gl/maps/CoSc7qcE1L1ujjXk9
@@ -34,14 +34,13 @@ Please read [flipped classroom](FLIPPED_CLASSROOM.md) and [getting started](gett
 
 ## Planning
 
-| Week | Topic                                                        | Preparation                         | Lesson plan                         | Homework                      |
-| ---- | ------------------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----------------------------- |
-| 1.   | **Fundamentals** <br />* Intro to .NET and C#<br />* First program (console)<br />* Data types and variables<br />* Methods<br />* Controlling program flow<br />* Debugging program | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
-| 2.   | **C# Fundamentals**<br />* Intro to OOP concepts<br />* Classes<br />* Abstract classes | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
-| 3.   | **[ASP.NET](http://asp.net/) Core fundamentals**<br />* Anatomy of the [ASP.NET](http://asp.net/) core application<br />* Controllers<br />* Models | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md) | [Homework](week3/homework.md) |
-| 4.   | **[ASP.NET](http://asp.net/) Core**<br />* Interfaces<br />* Dependency Injection<br />* Building first API (creating first controllers and models) | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | [Homework](week4/homework.md) |
-| 5.   | **Working with persisted data**<br />* Async/await<br />* Connecting and querying data<br />* Reading and persisting data | [Preparation](week5/preparation.md) | [Lesson plan](week5/lesson-plan.md) | [Homework](week5/homework.md) |
-| 6.   | **Project**<br />* Connecting frontend and backend           | [Preparation](week6/preparation.md) | [Lesson plan](week6/lesson-plan.md) | [Homework](week6/homework.md) |
-| 7.   | **Project**<br />* Connecting frontend and backend           | [Preparation](week7/preparation.md) | [Lesson plan](week7/lesson-plan.md) | [Homework](week7/homework.md) |
-| 8.   | **Project**<br />* Wrapping up<br />* Final words<br />* Deployment (optional) | [Preparation](week8/preparation.md) | [Lesson plan](week8/lesson-plan.md) | [Homework](week8/homework.md) |
-
+| Week | Topic                                       | Preparation                         | Lesson plan                         | Homework                      |
+| ---- | ------------------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------- |
+| 1.   | **[ASP.NET](http://asp.net/) fundamentals** | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
+| 2.   | **C# Fundamentals**                         | TBD                                 | TBD                                 | TBD                           |
+| 3.   | **Interfaces and classes**                  | TBD                                 | TBD                                 | TBD                           |
+| 4.   | **Async and await**                         | TBD                                 | TBD                                 | TBD                           |
+| 5.   | **Working with persisted data**             | TBD                                 | TBD                                 | TBD                           |
+| 6.   | **Working with databases**                  | TBD                                 | TBD                                 | TBD                           |
+| 7.   | **Connecting to frontend**                  | TBD                                 | TBD                                 | TBD                           |
+| 8.   | **Project**                                 | TBD                                 | TBD                                 | TBD                           |
