@@ -356,3 +356,10 @@ Don't forget - curiosity and exploration is highly encouraged while learning a
 new topic.
 
 See you at the class!
+
+## Additional links and materials
+
+- [What is .NET? What is .NET? What's C#?](https://www.youtube.com/watch?v=bEfBfBQq7EE) (19 minutes)
+- [Hello world in C#](https://www.youtube.com/watch?v=KT2VR7m19So&feature=youtu.be) (4:39 min) / Microsoft Learn link
+- [Using .NET in Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet)
+- [Create minimal api](https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-7.0&tabs=visual-studio-code#create-an-api-project)
