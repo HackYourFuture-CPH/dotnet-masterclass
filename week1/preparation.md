@@ -107,7 +107,7 @@ info: Microsoft.Hosting.Lifetime[0]
 - Stop the server by clicking on the red square in the VSCode.
 - Explore project. Open `Program.cs` try changing the text and running project with F5 again.
 
-#### **Task:**
+#### 🧑‍🏫 **Task:**
 
 - Similar to the fashion of the node.js course, add `/info` route to `Program.cs`
 - You can find the currently running version of the .NET from `Environment.Version`
