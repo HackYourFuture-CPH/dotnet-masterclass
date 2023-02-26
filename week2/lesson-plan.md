@@ -1,23 +1,20 @@
-# Week 2 : C# Fundamentals
+# Week 1 - lesson plan
 
-## Pre-requisites:
+## Agenda
 
-- Installed **.NET 6 SDK** & **Visual Studio Code** on the machine.
-- Install C# support for **VS Code** from the Marketplace.
+- Q&A about preparation materials
+- Let's take a look at preparation materials (Ivan)
+- Let's talk about C# Fundamentals
+  - Methods (Ivan)
+  - Generics (Ivan)
+  - Lists (Calin)
 
-## Lesson Plan:
+## Exercises
 
-### 1 Intro to OOP concepts
+### 1. 
 
-What is object oriented programming and what problems does it solve?
-Let's take
+### 2. 
 
-### 2 Classes
+### 3. 
 
-- [Using objects and classes](https://docs.microsoft.com/en-us/shows/csharp-101/csharp-object-oriented-programming-objects-and-classes/)
-- [Defining methods and members](https://docs.microsoft.com/en-us/shows/csharp-101/csharp-object-oriented-programming-methods-and-members/)
-
-### 3 Inheritance and reuse
-
-- Why do we need this?
-- What are abstract classes?
+### 4. 
