@@ -11,9 +11,9 @@
 
 ## Exercises
 
-### 1. 
+### 1. [Minimal API]
 
-### 2. 
+### 2. [Method + Generic Method]
 
 ### 3. Distinct alphabetical list
 Make a `POST` endpoint that takes a list of strings as input and returns a new list containing only the unique elements, sorted in alphabetical order. For example, if the input list is `["apple", "banana", "cherry", "apple", "date", "banana"]`, the output should be `["apple", "banana", "cherry", "date"]`.
