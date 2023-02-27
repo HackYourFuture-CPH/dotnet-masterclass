@@ -16,7 +16,14 @@ Make a `GET` endpoint that will take parameter `number1` and `number2` and based
 
 Example: `GET /calculate?number1=5&number2=10&operation=add` would return 15 as a result.
 
-### 2. [Method + Generic Method]
+### 2. Method example
+Make a `GET` endpoint that will take `input` parameter. If `input` parameter is an integer call `AddNumbers` method that receives input and returns sum of all integer values. If input is not an integer then call method `CountCapitalLetters` method that receives input and returns counter of all caputal letters.
+
+Hint: use `int.TryParse()` and `char.IsUpper()`
+
+Example 1: `GET /?input=153` would calculate 1 + 5 + 3 and return 9.
+Example 2: `GET /?input=The Quick Brown Fox Jumps Over the Lazy Dog` will return 8.
+
 
 ### 3. Distinct alphabetical list
 Make a `POST` endpoint that takes a list of strings as input and returns a new list containing only the unique elements, sorted in alphabetical order. For example, if the input list is `["apple", "banana", "cherry", "apple", "date", "banana"]`, the output should be `["apple", "banana", "cherry", "date"]`.
