@@ -12,7 +12,8 @@
 ## Exercises
 
 ### 1. Caclulator
-Make a `GET` endpoint that will take parameter `number1` and `number2` and based on `operation` parameter will perform one of following operations: addition, substraction, multiplication. If number1 or number2 are not a number return bad request response. For operation valid values are `add`, `substract`, `multiplay`. 
+Make a `GET` endpoint that will take parameter `number1` and `number2` and based on `operation` parameter will perform one of following operations: addition, substraction, multiplication. If number1 or number2 are not a number return bad request response. For operation valid values are `add`, `substract`, `multiplay`.
+
 Example: `GET /calculate?number1=5&number2=10&operation=add` would return 15 as a result.
 
 ### 2. [Method + Generic Method]
