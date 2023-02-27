@@ -136,7 +136,7 @@ In C#, data types and variables are closely intertwined. Remember how C# is stro
 
 There are two ways we can assign variables. We can do it on two lines:
 
-```
+```csharp
 // Declare an integer
 int myNumber;
 myNumber = 42;
@@ -144,7 +144,7 @@ myNumber = 42;
 
 Or, we can be more concise and just do it on one:
 
-```
+```csharp
 // Declare an integer
 int myNumber = 42;
 ```
