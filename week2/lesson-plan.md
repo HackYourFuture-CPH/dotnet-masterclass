@@ -26,7 +26,7 @@ Example 2: `GET /?input=The Quick Brown Fox Jumps Over the Lazy Dog` will return
 
 
 ### 3. Distinct alphabetical list
-Make a `POST` endpoint that takes a list of strings as input and returns a new list containing only the unique elements, sorted in alphabetical order. For example, if the input list is `["apple", "banana", "cherry", "apple", "date", "banana"]`, the output should be `["apple", "banana", "cherry", "date"]`.
+Make a `GET` endpoint that takes a `string` as input and returns a new list containing only the unique characters, sorted in alphabetical order. For example, if the input `string` is `The cool breeze whispered through the trees`, the output should be `["b", "c", "d", "e", "h", "i", "l", "o", "p", "r", "s", "t", "u", "w", "z"]`.
 
 ### 4. Word Frequency Count
 Write a `GET` endpoint that takes a `string` as input and counts the frequency of each word in the `string`. 
