@@ -1,15 +1,8 @@
 # Week 4 - preparation: Async and await
 
-We are going to learn some new concepts this week.
-I suggest going over the following material:
-
-- [Task asynchronous programming model](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model)
-- [Asynchronous programming](https://learn.microsoft.com/en-gb/dotnet/csharp/asynchronous-programming/async-scenarios)
-- [Video: Introduction To Async, Await, And Tasks](https://www.youtube.com/watch?v=X9N5r6kMOxw)
-
-- [Async explained with common scenario](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming)
 ## What is async/await?
-Async/await is a feature in C# that allows you to write asynchronous code that is easy to read and understand. Asynchronous code is code that can perform multiple tasks concurrently, which can help improve performance and responsiveness in certain situations, such as when making web requests or accessing a database.
+
+Async/await is a feature in C# that allows you to write asynchronous code that is easy to read and understand. Asynchronous code is code that can perform multiple tasks concurrently (in the same time), which can help improve performance and responsiveness in certain situations, such as when making web requests or accessing a database.
 
 The `async` keyword is used to define a method as asynchronous, and the `await` keyword is used to pause the execution of the method until a task is complete. When the method is paused, control is returned to the calling method, allowing other code to execute. When the awaited task is complete, the method resumes execution.
 
@@ -28,9 +21,10 @@ async Task<string> GetDataAsync()
 In this example, the `GetDataAsync` method is defined as asynchronous using the `async` keyword. Inside the method, an instance of the HttpClient class is created and used to make a web request to the URL "`https://example.com/data`". The `await` keyword is used to pause execution of the method until the web request completes. Once the request is complete, the response is read using the `ReadAsStringAsync` method and the result is returned.
 
 ## What is a task?
-A `Task` is an object that represents some work that should be done. The task can tell you if the work is completed and if the operation returns a result, the task gives you the result. Shortly, a `Task` represents an asynchronous operation that may or may not return a value.
 
-A `Task` is a way of representing work that needs to be done asynchronously. When a method returns a `Task`, it means that the method is doing some work in the background and will notify the caller when it is finished. The caller can then continue with other work while the background task is being executed.
+A `Task` is an object that represents some work that should be done. The task can tell you if the work is completed and if the operation returns a result, the task gives you the result. In short, a `Task` represents an asynchronous operation that may or may not return a value.
+
+When a method returns a `Task`, it means that the method is doing some work in the background and will notify the caller when it is finished. The caller can then continue with other work while the background task is being executed.
 
 Here's an example of how to create and use a `Task` in C#:
 
@@ -66,7 +60,7 @@ The `UseTask` method creates a `Task<string>` by calling `GetDataAsync`. While t
 
 There are situations where you need to retrieve multiple pieces of data concurrently. The `Task` class contains two methods, `Task.WhenAll` and `Task.WhenAny`, that allow you to write asynchronous code that performs a non-blocking wait on multiple background jobs.
 
-This example shows how you might grab User data for a set of userIds.
+This example with `Task.WhenAll` shows how you might grab User data for a set of userIds and return all when they are ready.
 
 ```csharp
 async Task<User> GetUserAsync(int userId)
@@ -80,11 +74,62 @@ async Task<User> GetUserAsync(int userId)
 async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
+
+    // Loop over the list of ids to create a task for each
     foreach (int userId in userIds)
     {
-        getUserTasks.Add(GetUserAsync(userId));
+        // Create a new task
+        var getUserTask = GetUserAsync(userId);
+
+        // Add the task to the list of tasks
+        getUserTasks.Add(getUserTask);
     }
 
+    // Wait until all of the tasks are completed before returing
     return await Task.WhenAll(getUserTasks);
 }
 ```
+
+This example with `Task.WhenAny` shows how you might grab User data for a set of userIds and log when any of the tasks are done.
+
+```csharp
+async Task<User> GetUserAsync(int userId)
+{
+    // Code omitted:
+    //
+    // Given a user Id {userId}, retrieves a User object corresponding
+    // to the entry in the database with {userId} as its Id.
+}
+
+async Task GetUsersAsync(IEnumerable<int> userIds)
+{
+    var getUserTasks = new List<Task<User>>();
+
+    // Loop over the list of ids to create a task for each
+    foreach (int userId in userIds)
+    {
+        // Same as above, but in one line. Create a new task and add it directly in the list
+        getUserTasks.Add(GetUserAsync(userId));
+    }
+
+    // While the list from above has tasks, loop over them
+    while (getUserTasks.Any())
+    {
+        // When any of the tasks is done assign it to the variable
+        var user = await Task.WhenAny(getUserTasks);
+
+        // We then have to remove the task from the list of tasks as it is completed
+        getUserTasks.Remove(user);
+
+        // Log to the console the retrieval of each user
+        System.Console.WriteLine($"User {user.Name} was retrieved");
+    }
+}
+```
+
+## Usefull following material:
+
+- [Task asynchronous programming model](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model)
+- [Asynchronous programming](https://learn.microsoft.com/en-gb/dotnet/csharp/asynchronous-programming/async-scenarios)
+- [Video: Introduction To Async, Await, And Tasks](https://www.youtube.com/watch?v=X9N5r6kMOxw)
+- [Async explained with common scenario](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming)
