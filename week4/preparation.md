@@ -166,4 +166,4 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
     - takes `names` as a comma separated string as a query parameter (e.g. `john,ann,alex`)
     - splits the string by comma and and removes any white spaces
     - for each name calls an async `GetUserByName` method which contains an http call to the dummy url. (The method should return the `Task<User>`)
-    - when all the `Task`s are completed, the list of users is returned.
+    - `WhenAll` the `Task`s are completed, the list of users is returned.
