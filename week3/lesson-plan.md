@@ -18,7 +18,7 @@ Bonus: create Kelvin property
 
 ```
 var temperature = new Temperature(10);
-Console.WriteLine(temperature.Fahrenheit);
+Console.WriteLine($"{temperature.Celsius} Celsius is {temperature.Fahrenheit} Fahrenheit");
 ```
 
 2. Create a class named `ExchangeRate` with a constructor with two string parameters, `fromCurrency` and `toCurrency`. Add a decimal property called `Rate` and method `Calculate` with decimal parameter `amount` return value of the method should be a product of `Rate` and `amount` multiplication.
@@ -26,9 +26,12 @@ Console.WriteLine(temperature.Fahrenheit);
 Bonus: We should also check that `Rate` or `amount` are not negative.
 
 ```
+var fromCurrency = "EUR";
+var toCurrency = "DKK";
+var amount = 100;
 var exchangeRate = new ExchangeRate("EUR", "DKK");
 exchangeRate.Rate = 7.5m;
-Console.WriteLine(exchangeRate.Calculate());
+Console.WriteLine($"{amount} {fromCurrency} is {exchangeRate.Calculate()} {toCurrency}");
 ```
 
 3. Create interface `IAnimal` with property `Name` and `Sound` . Create classes `Cow`, `Cat` and `Dog` that implement `IAnimal` . Instantiate all three classes and pass them to a new method called `MakeSound` that has single parameter `IAnimal` and it writes to console eg “Dog says woof woof” if instance of the Dog class is passed.
