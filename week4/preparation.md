@@ -145,7 +145,7 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
     https://dummyjson.com/; e.g. https://dummyjson.com/products/1
 >- to check if an api call is successful the `HttpResponseMessage` has a property called `IsSuccessStatusCode` e.g. `response.IsSuccessStatusCode`
 >- to return an object from a response you can use 
-    `ReadFromJsonAsync(typeof(object))` instead of `ReadAsStringAsync()`
+    `ReadFromJsonAsync<object>()` instead of `ReadAsStringAsync()`
 
 2. __Get users with name__: Create a new `GET` endpoint that does the following:
     - takes a `name` as a query parameter 
@@ -167,3 +167,5 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
     - splits the string by comma and and removes any white spaces
     - for each name calls an async `GetUserByName` method which contains an http call to the dummy url. (The method should return the `Task<User>`)
     - `WhenAll` the `Task`s are completed, the list of users is returned.
+> **_NOTE:_**
+> - the http call in `GetUserByName` will return you a list of users, you can just return the `FirstOrDefault` user from this list for simplicity. (so you can have `Task<User>`)
