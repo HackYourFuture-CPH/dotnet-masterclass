@@ -134,8 +134,7 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
 
 
 ## Exercises
-1. __Get item by id__: Create a new endpoint based on the following
-    - is `GET`
+1. __Get item by id__: Create a new `GET` endpoint that does the following
     - takes an `id` as a query parameter (`int`)
     - executes an async `GET HTTP` call to an endpoint using the id from the query parameter
     - checks if the response is successful
@@ -148,8 +147,7 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
 >- to return an object from a response you can use 
     `ReadFromJsonAsync(typeof(object))` instead of `ReadAsStringAsync()`
 
-2. __Get users with name__: Create a new endpoint based on the following:
-    - is `GET`
+2. __Get users with name__: Create a new `GET` endpoint that does the following:
     - takes a `name` as a query parameter 
     - validates that the `name` is not null or an empty string (if it is it returns a `BadRequest`)
     - calls (async) the same dummy endpoint and returns a list of users (id, firstName, lastName) that have been found
@@ -160,3 +158,12 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
     >> - use a mix of `ReadFromJsonAsync` and define 2 new classes
     >> - One would be the main `Response` (the response with a List of Users inside) 
     >> - and the second would be the actual `User` class in which you can define the required properties.
+
+---
+
+## Extra:
+3. __Get products with ids__: Create a new `GET` endpoint that does the following:
+    - takes `names` as a comma separated string as a query parameter (e.g. `john,ann,alex`)
+    - splits the string by comma and and removes any white spaces
+    - for each name calls an async `GetUserByName` method which contains an http call to the dummy url. (The method should return the `Task<User>`)
+    - when all the `Task`s are completed, the list of users is returned.
