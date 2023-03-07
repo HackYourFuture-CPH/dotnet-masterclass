@@ -2,7 +2,7 @@
 
 ## What is async/await?
 
-Async/await is a feature in C# that allows you to write asynchronous code that is easy to read and understand. Asynchronous code is code that can perform multiple tasks concurrently (in the same time), which can help improve performance and responsiveness in certain situations, such as when making web requests or accessing a database.
+Async/await is a feature in C# that allows you to write asynchronous code. Asynchronous code is code that can perform multiple tasks concurrently (in the same time), which can help improve performance and responsiveness in certain situations, such as when making web requests or accessing a database.
 
 The `async` keyword is used to define a method as asynchronous, and the `await` keyword is used to pause the execution of the method until a task is complete. When the method is paused, control is returned to the calling method, allowing other code to execute. When the awaited task is complete, the method resumes execution.
 
@@ -29,8 +29,6 @@ When a method returns a `Task`, it means that the method is doing some work in t
 Here's an example of how to create and use a `Task` in C#:
 
 ```csharp
-using System.Threading.Tasks;
-
 async Task<string> GetDataAsync(string url)
 {
     var client = new HttpClient();
@@ -133,3 +131,32 @@ async Task GetUsersAsync(IEnumerable<int> userIds)
 - [Asynchronous programming](https://learn.microsoft.com/en-gb/dotnet/csharp/asynchronous-programming/async-scenarios)
 - [Video: Introduction To Async, Await, And Tasks](https://www.youtube.com/watch?v=X9N5r6kMOxw)
 - [Async explained with common scenario](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming)
+
+
+## Exercises
+1. __Get item by id__: Create a new endpoint based on the following
+    - is `GET`
+    - takes an `id` as a query parameter (`int`)
+    - executes an async `GET HTTP` call to an endpoint using the id from the query parameter
+    - checks if the response is successful
+    - returns the response or `Results.BadRequest` if the response fails
+
+> **_NOTE:_**
+>- a public api that returns dummy data can be found here: 
+    https://dummyjson.com/; e.g. https://dummyjson.com/products/1
+>- to check if an api call is successful the `HttpResponseMessage` has a property called `IsSuccessStatusCode` e.g. `response.IsSuccessStatusCode`
+>- to return an object from a response you can use 
+    `ReadFromJsonAsync(typeof(object))` instead of `ReadAsStringAsync()`
+
+2. __Get users with name__: Create a new endpoint based on the following:
+    - is `GET`
+    - takes a `name` as a query parameter 
+    - validates that the `name` is not null or an empty string (if it is it returns a `BadRequest`)
+    - calls (async) the same dummy endpoint and returns a list of users (id, firstName, lastName) that have been found
+> **_NOTE:_**
+>- the dummy page provides this endpoint that you can use: https://dummyjson.com/users/search?q=`searchquery`
+>- the response from the endpoint will be an object which will contain a list of users with a lot of data
+    >> - you only need to return the 3 properties specified above
+    >> - use a mix of `ReadFromJsonAsync` and define 2 new classes
+    >> - One would be the main `Response` (the response with a List of Users inside) 
+    >> - and the second would be the actual `User` class in which you can define the required properties.
