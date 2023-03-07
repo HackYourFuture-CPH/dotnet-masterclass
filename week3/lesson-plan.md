@@ -13,9 +13,22 @@
 ## Exercises
 
 1. Create a class named `Temperature` and make a constructor with one decimal parameter - degrees (Celsius) and assign its value to Property. The property has a public getter and private setter. The property setter throws an exception if temperature is less than 273.15 Celsius. Then, create a property `Fahrenheit` that will convert Celsius to Fahrenheit (it has no setter similar to `NicePrintout`)
-   Bonus: create Kelvin property
- 
-2. Create a class named `ExchangeRate` with a constructor with two parameters, `fromCurrency` and `toCurrency`. Add a decimal property called `Rate` and method `Calculate` with decimal parameter `amount` return value of the method should be a product of `Rate` and `amount` multiplication.
-   Bonus: We should also check that `Rate` or `amount` are not negative.
+
+Bonus: create Kelvin property
+
+```
+var temperature = new Temperature(10);
+Console.WriteLine(temperature.Fahrenheit);
+```
+
+2. Create a class named `ExchangeRate` with a constructor with two string parameters, `fromCurrency` and `toCurrency`. Add a decimal property called `Rate` and method `Calculate` with decimal parameter `amount` return value of the method should be a product of `Rate` and `amount` multiplication.
+
+Bonus: We should also check that `Rate` or `amount` are not negative.
+
+```
+var exchangeRate = new ExchangeRate("EUR", "DKK");
+exchangeRate.Rate = 7.5m;
+Console.WriteLine(exchangeRate.Calculate());
+```
 
 3. Create interface `IAnimal` with property `Name` and `Sound` . Create classes `Cow`, `Cat` and `Dog` that implement `IAnimal` . Instantiate all three classes and pass them to a new method called `MakeSound` that has single parameter `IAnimal` and it writes to console eg “Dog says woof woof” if instance of the Dog class is passed.
