@@ -8,4 +8,4 @@ Create a PR to add your homework to the respective week folder like you are used
 
 ## Homework exercises for Week #3
 
-TBD
+1. Create interface `IAnimal` with property `Name` and `Sound` . Create classes `Cow`, `Cat` and `Dog` that implement `IAnimal` . Instantiate all three classes and pass them to a new method called `MakeSound` that has single parameter `IAnimal` and it writes to console eg “Dog says woof woof” if instance of the Dog class is passed.
