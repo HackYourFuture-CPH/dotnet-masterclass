@@ -6,19 +6,75 @@ Async/await is a feature in C# that allows you to write asynchronous code. Async
 
 The `async` keyword is used to define a method as asynchronous, and the `await` keyword is used to pause the execution of the method until a task is complete. When the method is paused, control is returned to the calling method, allowing other code to execute. When the awaited task is complete, the method resumes execution.
 
-Here's an example of how you might use async/await in C#:
+<br/>
 
-```csharp
-async Task<string> GetDataAsync()
-{
-    var client = new HttpClient();
-    var response = await client.GetAsync("https://example.com/data");
-    var result = await response.Content.ReadAsStringAsync();
-    return result;
+## Comparison with JS
+
+In plain javascript we used the following style for handling asynchronous code:
+
+```js
+function getResults(q) {
+  return fetch(`https://dummyjson.com/users/search?q=${q}`)
+    .then((r) => r.json())
+    .then((data) => {
+      return data;
+    });
 }
 ```
 
-In this example, the `GetDataAsync` method is defined as asynchronous using the `async` keyword. Inside the method, an instance of the HttpClient class is created and used to make a web request to the URL "`https://example.com/data`". The `await` keyword is used to pause execution of the method until the web request completes. Once the request is complete, the response is read using the `ReadAsStringAsync` method and the result is returned.
+For those who played with TypeScript, it might look like:
+
+```ts
+async function getResults(q) {
+  const response = await fetch(`https://dummyjson.com/users/search?q=${q}`);
+  const data = await response.json();
+  // use data
+  return data;
+}
+```
+
+In C# we prefer using `async`/`await`:
+
+```csharp
+// Don't forget to put this on the top!
+using System.Net.Http.Json;
+
+public async Task GetResult(string q)
+{
+    var response = await new HttpClient().GetAsync($"https://dummyjson.com/users/search?q={q}");
+    if (!response.IsSuccessStatusCode)
+    {
+        throw new Exception($"Uh-oh!: {response.StatusCode}");
+    }
+
+    // prefer having a proper type
+    var data = response.Content.ReadFromJsonAsync<object>();
+    // cannot use this data for much...
+}
+```
+
+In this example, the `GetResult` method is defined as asynchronous using the `async` keyword. Inside the method, an instance of the HttpClient class is created and used to make a web request to the URL "`https://dummyjson.com/users/search?q={q}`". The `await` keyword is used to pause execution of the method until the web request completes. Once the request is complete, the response is read using the `ReadFromJsonAsync` method and the result is returned.
+
+### `.ContinueWith`
+
+`Promise<>` in JS/TS matches `Task<>` in C#. Instead of `.then` one could use `.ContinueWith`:
+
+```csharp
+var data = new HttpClient().GetAsync("https://dummyjson.com/users/search?q=Sheldon")
+    .ContinueWith(t =>
+    {
+        // Unlike in .then, t here is a Task which contains Result
+        // we need to "unwrap" it
+        var response = t.Result;
+    });
+```
+
+>__*Note:*__ As this style of writing async code in C# is rarely used, it is here merely to
+demonstrate that C# and JS are quite similar under the hood. If you want to
+learn more about this, check out [Task Parallel Library](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/task-parallel-library-tpl), but
+note that it is quite advance.
+
+<br/>
 
 ## What is a task?
 
@@ -29,18 +85,18 @@ When a method returns a `Task`, it means that the method is doing some work in t
 Here's an example of how to create and use a `Task` in C#:
 
 ```csharp
-async Task<string> GetDataAsync(string url)
+async Task<object> GetResultAsync(string url)
 {
     var client = new HttpClient();
     var response = await client.GetAsync(url);
-    var result = await response.Content.ReadAsStringAsync();
+    var result = await response.Content.ReadFromJsonAsync<object>();
     return result;
 }
 
-async void UseTask()
+async Task UseResultAsync()
 {
-    var url = "https://example.com";
-    Task<string> task = GetDataAsync(url);
+    var url = "https://dummyjson.com/users/search?q=Sheldon";
+    Task<object> task = GetResultAsync(url);
 
     // Do some other work while the task is being executed.
 
@@ -50,9 +106,127 @@ async void UseTask()
 
 ```
 
-In this example, the `GetDataAsync` method is defined to return a `Task<string>`, indicating that it is an asynchronous operation that will return a `string`. The method uses the `HttpClient` class to make a web request and returns the result as a `string`.
+In this example, the `GetResultAsync` method is defined to return a `Task<object>`, indicating that it is an asynchronous operation that will return a `object`. The method uses the `HttpClient` class to make a web request and returns the result as a `object`.
 
-The `UseTask` method creates a `Task<string>` by calling `GetDataAsync`. While the task is being executed, the method can do other work. Once the task is complete, the result is obtained using the `await` keyword and can be used for further processing.
+The `UseResultAsync` method creates a `Task<object>` by calling `GetResultAsync`. While the task is being executed, the method can do other work. Once the task is complete, the result is obtained using the `await` keyword and can be used for further processing.
+
+<br/>
+
+## Typing responses
+
+Unlike JavaScript, in C# you need to specify types upfront when deserializing.
+This presents a small challenge.
+
+Let's take a look at the following example:
+
+```csharp
+var response = await new HttpClient().GetAsync("https://dummyjson.com/users/search?q=Sheldon");
+var data = await response.Content.ReadFromJsonAsync<object>();
+Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(data));
+```
+
+It will print out:
+
+```json
+{
+  "users": [
+    {
+      "id": 2,
+      "firstName": "Sheldon",
+      "lastName": "Quigley",
+      "maidenName": "Cole",
+      [...]
+      "address": {
+        "address": "6007 Applegate Lane",
+        [...]
+      },
+      "macAddress": "13:F1:00:DA:A4:12",
+      "university": "Stavropol State Technical University",
+      "bank": {
+        "cardExpire": "10/23",
+        [...]
+      },
+      "company": {
+        "address": {
+          "address": "8821 West Myrtle Avenue",
+         [...]
+        },
+        "department": "Services",
+        "name": "Aufderhar-Cronin",
+        "title": "Senior Cost Accountant"
+      },
+      "ein": "52-5262907",
+      "ssn": "447-08-9217",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/11.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30"
+    }
+  ],
+  "total": 1,
+  "skip": 0,
+  "limit": 1
+}
+```
+
+How do we get to those properties? The answer is by writing our own types.
+First, take a look at the root: it starts with `{` which means this is an object.
+
+Let's define our response type:
+
+```csharp
+class DummyResponse {}
+```
+
+Now let's use it:
+
+```csharp
+var response = await new HttpClient().GetAsync("https://dummyjson.com/users/search?q=Sheldon");
+var data = await response.Content.ReadFromJsonAsync<DummyResponse>();
+Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(data));
+```
+
+The code will print out `{}`. Where did all our data go?
+When deserializing, we chose to put _some_ data on the types and only that data will be used.
+
+Let's change the type to:
+
+```csharp
+class User
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; }
+}
+class DummyResponse
+{
+    public List<User> Users { get; set; }
+}
+```
+
+Running the fetching code we get:
+
+```json
+{ "Users": [{ "Id": 2, "FirstName": "Sheldon" }] }
+```
+
+Exercise:
+
+- Keep adding properties from the response to C# code.
+- Try playing with the types.
+- Can you get typed version to contain _all_ the original data?
+- Try using `FirstName`, `firstName` and `First_Name` in the above example
+
+<br/>
+
+## For those who want to know more
+
+C# 9 introduces [records](https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records) which simplify a lot of code, but it is still new and there are rough edges which require playing a lot with them. The above code can be simplified as
+
+```csharp
+record User(int Id, string FirstName);
+record DummyResponse(List<User> Users);
+```
+
+As this is a C# 9 feature, it might be available in lots of existing codebases.
+
+<br/>
 
 ## Working with async/await
 
@@ -65,8 +239,7 @@ async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
-    // Given a user Id {userId}, retrieves a User object corresponding
-    // to the entry in the database with {userId} as its Id.
+    // Given a user Id {userId}, retrieve a user with that id
 }
 
 async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
