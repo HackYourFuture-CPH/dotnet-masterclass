@@ -38,7 +38,7 @@ Please read [flipped classroom](FLIPPED_CLASSROOM.md) and [getting started](gett
 | ---- | ------------------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------- |
 | 1.   | **[ASP.NET](http://asp.net/) fundamentals** | [Preparation](week1/preparation.md) | [Lesson plan](week1/lesson-plan.md) | [Homework](week1/homework.md) |
 | 2.   | **C# Fundamentals**                         | [Preparation](week2/preparation.md) | [Lesson plan](week2/lesson-plan.md) | [Homework](week2/homework.md) |
-| 3.   | **Interfaces and classes**                  | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md)                                 | TBD                           |
+| 3.   | **Interfaces and classes**                  | [Preparation](week3/preparation.md) | [Lesson plan](week3/lesson-plan.md) | [Homework](week3/homework.md) |
 | 4.   | **Async and await**                         | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | TBD                           |
 | 5.   | **Working with persisted data**             | TBD                                 | TBD                                 | TBD                           |
 | 6.   | **Working with databases**                  | TBD                                 | TBD                                 | TBD                           |
