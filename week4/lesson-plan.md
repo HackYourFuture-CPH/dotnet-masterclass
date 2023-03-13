@@ -4,9 +4,10 @@
 
 1. Q&A - 15m
 2. Kahoot - 15m
-___
 3. Introduce async await - 20m
 4. Showcase a `asynchronous` http call using `GetAsync` (`https://reqres.in/api/users?delay=1`) - 20m
+___
+5. Break - 30m
 ___
 6. Introduce Task - 20m
 7. Showcase `missing` to await a task. E.g.: Create a loop and call an endpoint with console log => make it throw and show that the execution continues and it fails silently - 20m
