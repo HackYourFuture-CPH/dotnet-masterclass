@@ -44,3 +44,10 @@ Please read [flipped classroom](FLIPPED_CLASSROOM.md) and [getting started](gett
 | 6.   | **Working with databases**                  | TBD                                 | TBD                                 | TBD                           |
 | 7.   | **Connecting to frontend**                  | TBD                                 | TBD                                 | TBD                           |
 | 8.   | **Project**                                 | TBD                                 | TBD                                 | TBD                           |
+
+## Helper materials
+
+- Comparison between Javascript and C#
+  - [Variables](helpers/comparison%201%20-%20variables.md)
+- [LINQ](helpers/linq.md)
+- [Working with multiple files](helpers/multiple%20files.md)
