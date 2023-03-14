@@ -36,9 +36,6 @@ async function getResults(q) {
 In C# we prefer using `async`/`await`:
 
 ```csharp
-// Don't forget to put this on the top!
-using System.Net.Http.Json;
-
 public async Task GetResult(string q)
 {
     var response = await new HttpClient().GetAsync($"https://dummyjson.com/users/search?q={q}");
