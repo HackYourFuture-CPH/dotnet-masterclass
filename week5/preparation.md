@@ -44,7 +44,7 @@ File.WriteAllText(@"X:\test.txt", "some text"); // ❌ drive X does not exist, t
 
 🏗️**Task:**
 
-- Try writing text to a file.
+- Try persisting text to a file.
 - Find a method in `File` class that you can use to append text to the file from previous step. Try using VSCode intelligence before searching in google.
 
 ## More
