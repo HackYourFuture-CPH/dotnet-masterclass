@@ -18,7 +18,7 @@ Having a finished week 4 homework.
 
 ## Exercise:
 
-1. Create web application (`dotnet new web`) and start by creating a Meal class. Add relevant properties:
+1. Create a new web application (`dotnet new web`) inside `mealsharing` folder and start by creating a Meal class. Add relevant properties:
    - Headline
    - image url
    - body text,
