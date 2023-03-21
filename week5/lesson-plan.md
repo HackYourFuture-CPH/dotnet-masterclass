@@ -23,7 +23,7 @@ Having a finished week 4 homework.
 Create an IMealService interface with `List<Meal> ListMeals` and `AddMeal(Meal meal)` methods.
 Create a FileMealService that implements IMealService: 
   * "ListMeals()" method - reads and deserializes meals from the file
-  * "AddMeal" method - have it save (persist) meals to a file.
+  * "AddMeal" method - have it save (persist) meals to a file. **Remember:** call ListMeals to load all meals before adding new meal to the list.
 
 Register `FileMealService` as service using dependency injection.
 ```
