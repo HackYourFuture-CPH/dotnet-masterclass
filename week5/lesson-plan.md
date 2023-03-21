@@ -44,6 +44,6 @@ builder.Services.AddScoped<ISomething, Something>();
 Create a simple API for adding and listing meals using the MealService.
 
 ```csharp
-app.MapGet("/meals", ([FromServices] IMealSharingService apb) => { ... });
-app.MapPost("/meals", ([FromServices] IMealSharingService apb) => { ... });
+app.MapGet("/meals", ([FromServices] IMealSharingService mealSharingService) => { ... });
+app.MapPost("/meals", ([FromServices] IMealSharingService mealSharingService) => { ... });
 ```
