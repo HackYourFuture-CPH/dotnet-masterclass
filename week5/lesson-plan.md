@@ -45,7 +45,7 @@ Create a simple API for adding and listing meals using the MealService.
 
 ```csharp
 app.MapGet("/meals", ([FromServices] IMealSharingService mealSharingService) => { ... });
-app.MapPost("/meals", ([FromServices] IMealSharingService mealSharingService) => { ... });
+app.MapPost("/meals", ([FromServices] IMealSharingService mealSharingService, Meal meal) => { ... });
 ```
 
 Run the appplication, add and list meals. Try stopping and runnign application again.
