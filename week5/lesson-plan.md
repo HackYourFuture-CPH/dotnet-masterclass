@@ -27,7 +27,7 @@ Create a FileMealService that implements IMealService:
 
 Register `FileMealService` as service using dependency injection.
 ```
-builder.Services.AddScoped<ISomething, Something>();
+builder.Services.AddSingleton<ISomething, Something>();
 ```
 Create a simple API for adding and listing meals using the MealService.
 ```
