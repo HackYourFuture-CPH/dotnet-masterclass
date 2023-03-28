@@ -11,7 +11,7 @@ Follow the instructions for your OS to install MySql on your machine.
 If you want to use Docker, install Docker and run the following command:
 
 ```bash
-docker run --name db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_ROOT_HOST=% -p 3306:3006 -d mysql:8
+docker run --name db -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql/mysql-server
 
 # To test connection
 docker exec -it db mysql -uroot -p
