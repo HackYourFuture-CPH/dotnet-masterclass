@@ -42,7 +42,7 @@ Please read [flipped classroom](FLIPPED_CLASSROOM.md) and [getting started](gett
 | 4.   | **Async and await**                         | [Preparation](week4/preparation.md) | [Lesson plan](week4/lesson-plan.md) | [Homework](week4/homework.md) |
 | 5.   | **Working with persisted data**             | [Preparation](week5/preparation.md) | [Lesson plan](week5/lesson-plan.md) | [Homework](week5/homework.md) |
 | 6.   | **Working with databases**                  | [Preparation](week6/preparation.md) | [Lesson plan](week6/lesson-plan.md) | [Homework](week6/homework.md) |
-| 7.   | **Connecting to frontend**                  | TBD                                 | TBD                                 | TBD                           |
+| 7.   | **Connecting to frontend**                  | [Preparation](week7/preparation.md) | [Lesson plan](week7/lesson-plan.md) | TBD                           |
 | 8.   | **Project**                                 | TBD                                 | TBD                                 | TBD                           |
 
 ## Helper materials
