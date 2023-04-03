@@ -11,7 +11,7 @@ Having a finished week 6 homework and **Preparation**.
 
 ## Task
 
-Continue working on mealsharing project from the preparation. 
+Continue working on mealsharing project from the preparation. As a first step add package reference to the `Dapper` and `MySql.Data`.
 1. Meals
   * Create an endpoint for fetching/searching the meals - endpoint route should be based on the needs of your frontend. In most cases it's `GET /api/meals` (if you followed preparation you already have this endpoint that is returning dummy data).
   * Create `IMealRepository` interface with `Search()` method and implement it as a class `MealRepository`.
